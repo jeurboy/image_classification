@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
 from __future__ import absolute_import, division, print_function, unicode_literals
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import tensorflow as tf
-import config as cfg
-import model
 
 import IPython.display as display
 import random
@@ -14,7 +13,8 @@ import matplotlib.pyplot as plt
 import pathlib
 import pandas as pd
 
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import config as cfg
+import model
 
 print(tf.__version__)
 

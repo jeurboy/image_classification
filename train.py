@@ -1,13 +1,12 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
+# import pandas as pd
 import config as cfg
 import model
-
 import tensorflow as tf
 import os
 import matplotlib.pyplot as plt
-import pandas as pd
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 print(tf.__version__)
 

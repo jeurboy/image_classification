@@ -7,15 +7,12 @@ import config as cfg
 
 def get():
     model = Sequential([
-        Conv2D(16, 5, padding='same', activation='relu', input_shape=(cfg.IMAGE_SIZE, cfg.IMAGE_SIZE, 3)),
-        MaxPooling2D(),
-        Conv2D(32, 5, padding='same', activation='relu'),
-        MaxPooling2D(),
-        Conv2D(64, 5, padding='same', activation='relu'),
-        MaxPooling2D(),
-        Dropout(0.2),
-        Conv2D(128, 5, padding='same', activation='relu'),
-        MaxPooling2D(),
+        Conv2D(20, (4, 4), padding='same', activation='relu', use_bias=False, input_shape=(cfg.IMAGE_SIZE, cfg.IMAGE_SIZE, 3)),
+        MaxPooling2D(pool_size=(2, 2)),
+        Conv2D(40, (4, 4), padding='same', activation='relu', use_bias=False),
+        MaxPooling2D(pool_size=(2, 2)),
+        Conv2D(60, (4, 4), padding='same', activation='relu', use_bias=False),
+        MaxPooling2D(pool_size=(2, 2)),
         Dropout(0.2),
         Flatten(),
         Dense(512, activation='relu'),
